@@ -55,9 +55,9 @@ export type BarChartCssVariables = {
 
 export interface BarChartProps
   extends BoxProps,
-    GridChartBaseProps,
-    StylesApiProps<BarChartFactory>,
-    ElementProps<'div'> {
+  GridChartBaseProps,
+  StylesApiProps<BarChartFactory>,
+  ElementProps<'div'> {
   /** Data used to display chart. */
   data: Record<string, any>[];
 
@@ -81,8 +81,8 @@ export interface BarChartProps
 
   /** Props passed down to recharts `Bar` component */
   barProps?:
-    | ((series: BarChartSeries) => Partial<Omit<BarProps, 'ref'>>)
-    | Partial<Omit<BarProps, 'ref'>>;
+  | ((series: BarChartSeries) => Partial<Omit<BarProps, 'ref'>>)
+  | Partial<Omit<BarProps, 'ref'>>;
 
   /** Determines whether a label with bar value should be displayed on top of each bar, incompatible with `type="stacked"` and `type="percent"`, `false` by default */
   withBarValueLabel?: boolean;
